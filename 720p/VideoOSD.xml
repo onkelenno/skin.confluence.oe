@@ -11,7 +11,9 @@
 	<controls>
 		<control type="button">
 			<description>Close Window button</description>
-			<left>84r</left>
+			<!-- onkel_enno: -->
+			<left>164r</left>
+			<!-- :onkel_enno -->
 			<top>0</top>
 			<width>64</width>
 			<height>32</height>
@@ -25,6 +27,91 @@
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<visible>system.getbool(input.enablemouse) + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 		</control>
+		<!-- onkel_enno: -->
+		<include>Clock</include>
+		<control type="label">
+			<description>Finish Time Label</description>
+			<right>20</right>
+			<top>35</top>
+			<width>300</width>
+			<height>15</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>font10</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$LOCALIZE[19081]: $INFO[Player.FinishTime]</label>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
+		</control>
+        <control type="group">
+			<left>320</left>
+			<top>90</top>
+			<visible>Player.HasVideo + VideoPlayer.HasInfo + !String.IsEmpty(VideoPlayer.Plot) + Skin.HasSetting(ShowPlotOSD)</visible>
+            <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide)]</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>950</width>
+				<height>410</height>
+				<texture border="20">ContentPanel.png</texture>
+			</control>
+			<control type="label">
+				<left>40</left>
+				<top>20</top>
+				<width>840</width>
+				<height>20</height>
+				<font>font24_title</font>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>31308</label> <!-- Film Details -->
+			</control>
+            <control type="fadelabel">
+                <left>40</left>
+                <top>50</top>
+                <width>400</width>
+                <height>30</height>
+                <font>font13</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <scroll>true</scroll>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$LOCALIZE[563]: $INFO[VideoPlayer.RatingAndVotes]</label> <!-- Bewertung -->
+                <scrollout>false</scrollout>
+                <pauseatend>2000</pauseatend>
+                <visible>!String.IsEmpty(VideoPlayer.RatingAndVotes)</visible>
+            </control>
+            <control type="label">
+                <left>40</left>
+                <top>90</top>
+                <width>400</width>
+                <height>30</height>
+                <font>font13_title</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <scroll>true</scroll>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>207</label> <!-- Handlung -->
+            </control>
+            <control type="textbox">
+                <left>40</left>
+                <top>130</top>
+                <width>870</width>
+                <height>320</height>
+                <font>font13</font>
+                <align>justify</align>
+                <textcolor>white</textcolor>
+                <label>$INFO[VideoPlayer.Plot]</label>
+                <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+            </control>
+		</control>
+		<!-- :onkel_enno -->
 		<control type="slider" id="87">
 			<depth>DepthOSD+</depth>
 			<description>Seek Slider</description>
@@ -183,7 +270,9 @@
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image" id="2600">
-				<width>325</width>
+                <!-- onkel_enno: -->
+				<width>270</width>
+                <!-- :onkel_enno -->
 				<texture/>
 				<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.HasMenu</visible>
 			</control>
@@ -198,6 +287,17 @@
 				<texturenofocus>OSDStereoscopicNF.png</texturenofocus>
 				<onup>501</onup>
 			</control>
+            <!-- onkel_enno: -->
+			<control type="button" id="249">
+				<enable>Player.HasVideo + VideoPlayer.HasInfo + !String.IsEmpty(VideoPlayer.Plot)</enable>
+                <visible>!VideoPlayer.Content(LiveTV)</visible>
+				<width>55</width>
+				<height>55</height>
+				<texturefocus>OSDTeleTextFO.png</texturefocus>
+				<texturenofocus>OSDTeleTextNF.png</texturenofocus>
+                <onclick>Skin.ToggleSetting(ShowPlotOSD)</onclick>
+			</control>
+            <!-- :onkel_enno -->
 			<control type="button" id="250">
 				<width>55</width>
 				<height>55</height>
