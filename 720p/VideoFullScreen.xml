@@ -62,6 +62,7 @@
 				<height>256</height>
 				<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
 			</control>
+			<!-- onkel_enno:
 			<control type="label" id="1">
 				<description>Chapter Count Header label</description>
 				<left>30</left>
@@ -76,6 +77,7 @@
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]$INFO[Player.ChapterName,[COLOR=grey] - (,)[/COLOR]]</label>
 				<visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
+			:onkel_enno -->
 			<control type="label" id="1">
 				<description>Channel Group label</description>
 				<left>30</left>
@@ -90,6 +92,7 @@
 				<label>$INFO[VideoPlayer.ChannelGroup,$LOCALIZE[31509]: ]</label>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
+			<!-- onkel_enno:
 			<control type="label" id="1">
 				<description>Clock label</description>
 				<left>450</left>
@@ -105,6 +108,7 @@
 				<animation effect="slide" start="0,0" end="-30,0" time="0" condition="Player.Muted">conditional</animation>
 				<animation effect="slide" start="0,0" end="-70,0" time="0" condition="system.getbool(input.enablemouse) + Window.IsVisible(VideoOSD)">conditional</animation>
 			</control>
+			:onkel_enno -->
 			<control type="image" id="1">
 				<left>-20</left>
 				<top>230r</top>
@@ -197,11 +201,28 @@
 					<height>25</height>
 					<align>left</align>
 					<font>font12</font>
-					<label>$INFO[VideoPlayer.Studio]</label>
+                    <!-- onkel_enno: -->
+					<label>$INFO[VideoPlayer.Studio] - $INFO[VideoPlayer.Year]</label>
+                    <!-- :onkel_enno -->
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>VideoPlayer.Content(Movies)</visible>
 				</control>
+				<!-- onkel_enno: -->
+				<control type="label" id="1">
+					<description>Chapter label</description>
+					<left>20</left>
+					<top>30</top>
+					<width>910</width>
+					<height>25</height>
+					<align>right</align>
+					<font>font12</font>
+					<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount,/]$INFO[Player.ChapterName,[COLOR=grey] - ,[/COLOR]]</label>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<!-- :onkel_enno -->
 				<control type="label" id="1">
 					<description>TV Show label</description>
 					<left>20</left>
@@ -258,8 +279,18 @@
 						<textcolor>orange</textcolor>
 						<scroll>true</scroll>
 					</control>
+                    <!-- onkel_enno: -->
 					<control type="image" id="1">
 						<description>Video Resolution Image</description>
+						<width>80</width>
+						<height>35</height>
+						<aspectratio align="center">keep</aspectratio>
+						<texture>$INFO[VideoPlayer.VideoCodec,flagging/video/,.png]</texture>
+						<visible>!Player.ChannelPreviewActive</visible>
+					</control>
+                    <!-- :onkel_enno -->
+					<control type="image" id="1">
+						<description>Video Codec Image</description>
 						<width>50</width>
 						<height>35</height>
 						<aspectratio align="center">keep</aspectratio>
