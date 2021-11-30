@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="51">
+	<zorder>2</zorder>
+	<visible>!Window.IsVisible(startup)</visible>
+	<controls>
+		<!-- Global debug grid -->
+		<control type="image">
+			<visible>Skin.HasSetting(DebugGrid)</visible>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>debuggrid.png</texture>
+		</control>
+		<!-- Window/Dialog debug -->
+		<control type="grouplist">
+			<left>15</left>
+			<top>105</top>
+			<width>780</width>
+			<height>450</height>
+			<visible>Skin.HasSetting(DebugGrid)</visible>
+
+            <!-- Current Theme -->
+            <control type="label">
+				<width>780</width>
+				<height>21</height>
+				<label>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</label>
+				<visible>true</visible>
+			</control>
+            
+			<!-- xml Files shown -->
+            <control type='label'><width>780</width><height>21</height><label>AddonBrowser.xml</label><visible>Window.IsVisible(AddonBrowser.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>Custom_Overlay.xml</label><visible>Window.IsVisible(Custom_Overlay.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>custom_PVRChannelNumberInput.xml</label><visible>Window.IsVisible(custom_PVRChannelNumberInput.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>custom_SideMenuHelp.xml</label><visible>Window.IsVisible(custom_SideMenuHelp.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>Defaults.xml</label><visible>Window.IsVisible(Defaults.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogAddonInfo.xml</label><visible>Window.IsVisible(DialogAddonInfo.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogAddonSettings.xml</label><visible>Window.IsVisible(DialogAddonSettings.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogBusy.xml</label><visible>Window.IsVisible(DialogBusy.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogButtonMenu.xml</label><visible>Window.IsVisible(DialogButtonMenu.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogConfirm.xml</label><visible>Window.IsVisible(DialogConfirm.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogContextMenu.xml</label><visible>Window.IsVisible(DialogContextMenu.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogExtendedProgressBar.xml</label><visible>Window.IsVisible(DialogExtendedProgressBar.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogFavourites.xml</label><visible>Window.IsVisible(DialogFavourites.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogGameControllers.xml</label><visible>Window.IsVisible(DialogGameControllers.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogKeyboard.xml</label><visible>Window.IsVisible(DialogKeyboard.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogMediaSource.xml</label><visible>Window.IsVisible(DialogMediaSource.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogMusicInfo.xml</label><visible>Window.IsVisible(DialogMusicInfo.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogNotification.xml</label><visible>Window.IsVisible(DialogNotification.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogNumeric.xml</label><visible>Window.IsVisible(DialogNumeric.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogPictureInfo.xml</label><visible>Window.IsVisible(DialogPictureInfo.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogPlayerProcessInfo.xml</label><visible>Window.IsVisible(DialogPlayerProcessInfo.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogPVRChannelGuide.xml</label><visible>Window.IsVisible(DialogPVRChannelGuide.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogPVRChannelManager.xml</label><visible>Window.IsVisible(DialogPVRChannelManager.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogPVRChannelsOSD.xml</label><visible>Window.IsVisible(DialogPVRChannelsOSD.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogPVRGroupManager.xml</label><visible>Window.IsVisible(DialogPVRGroupManager.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogPVRGuideSearch.xml</label><visible>Window.IsVisible(DialogPVRGuideSearch.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogPVRInfo.xml</label><visible>Window.IsVisible(DialogPVRInfo.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogPVRRadioRDSInfo.xml</label><visible>Window.IsVisible(DialogPVRRadioRDSInfo.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogSeekBar.xml</label><visible>Window.IsVisible(DialogSeekBar.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogSelect.xml</label><visible>Window.IsVisible(DialogSelect.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogSettings.xml</label><visible>Window.IsVisible(DialogSettings.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogSlider.xml</label><visible>Window.IsVisible(DialogSlider.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogSubtitles.xml</label><visible>Window.IsVisible(DialogSubtitles.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogTextViewer.xml</label><visible>Window.IsVisible(DialogTextViewer.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogVideoInfo.xml</label><visible>Window.IsVisible(DialogVideoInfo.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>DialogVolumeBar.xml</label><visible>Window.IsVisible(DialogVolumeBar.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>EventLog.xml</label><visible>Window.IsVisible(EventLog.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>FileBrowser.xml</label><visible>Window.IsVisible(FileBrowser.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>FileManager.xml</label><visible>Window.IsVisible(FileManager.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>Font.xml</label><visible>Window.IsVisible(Font.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>GameOSD.xml</label><visible>Window.IsVisible(GameOSD.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>Home.xml</label><visible>Window.IsVisible(Home.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>Includes.xml</label><visible>Window.IsVisible(Includes.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>IncludesBackgroundBuilding.xml</label><visible>Window.IsVisible(IncludesBackgroundBuilding.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>IncludesCodecFlagging.xml</label><visible>Window.IsVisible(IncludesCodecFlagging.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>IncludesHomeMenuItems.xml</label><visible>Window.IsVisible(IncludesHomeMenuItems.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>IncludesHomeRecentlyAdded.xml</label><visible>Window.IsVisible(IncludesHomeRecentlyAdded.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>IncludesPVR.xml</label><visible>Window.IsVisible(IncludesPVR.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>Includes_DialogSelect.xml</label><visible>Window.IsVisible(Includes_DialogSelect.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>LoginScreen.xml</label><visible>Window.IsVisible(LoginScreen.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MusicOSD.xml</label><visible>Window.IsVisible(MusicOSD.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MusicVisualisation.xml</label><visible>Window.IsVisible(MusicVisualisation.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyGames.xml</label><visible>Window.IsVisible(MyGames.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyMusicNav.xml</label><visible>Window.IsVisible(MyMusicNav.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyMusicPlaylistEditor.xml</label><visible>Window.IsVisible(MyMusicPlaylistEditor.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyPics.xml</label><visible>Window.IsVisible(MyPics.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyPlaylist.xml</label><visible>Window.IsVisible(MyPlaylist.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyPrograms.xml</label><visible>Window.IsVisible(MyPrograms.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyPVRChannels.xml</label><visible>Window.IsVisible(MyPVRChannels.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyPVRGuide.xml</label><visible>Window.IsVisible(MyPVRGuide.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyPVRRecordings.xml</label><visible>Window.IsVisible(MyPVRRecordings.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyPVRSearch.xml</label><visible>Window.IsVisible(MyPVRSearch.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyPVRTimers.xml</label><visible>Window.IsVisible(MyPVRTimers.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyVideoNav.xml</label><visible>Window.IsVisible(MyVideoNav.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>MyWeather.xml</label><visible>Window.IsVisible(MyWeather.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>PlayerControls.xml</label><visible>Window.IsVisible(PlayerControls.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>Pointer.xml</label><visible>Window.IsVisible(Pointer.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>script-cu-lrclyrics-main.xml</label><visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>script-globalsearch.xml</label><visible>Window.IsVisible(script-globalsearch.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>script-NextAired-TVGuide.xml</label><visible>Window.IsVisible(script-NextAired-TVGuide.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>script-RSS_Editor-rssEditor.xml</label><visible>Window.IsVisible(script-RSS_Editor-rssEditor.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>script-RSS_Editor-setEditor.xml</label><visible>Window.IsVisible(script-RSS_Editor-setEditor.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>Settings.xml</label><visible>Window.IsVisible(Settings.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>SettingsCategory.xml</label><visible>Window.IsVisible(SettingsCategory.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>SettingsProfile.xml</label><visible>Window.IsVisible(SettingsProfile.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>SettingsScreenCalibration.xml</label><visible>Window.IsVisible(SettingsScreenCalibration.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>SettingsSystemInfo.xml</label><visible>Window.IsVisible(SettingsSystemInfo.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>SkinSettings.xml</label><visible>Window.IsVisible(SkinSettings.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>SlideShow.xml</label><visible>Window.IsVisible(SlideShow.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>SmartPlaylistEditor.xml</label><visible>Window.IsVisible(SmartPlaylistEditor.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>SmartPlaylistRule.xml</label><visible>Window.IsVisible(SmartPlaylistRule.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>Startup.xml</label><visible>Window.IsVisible(Startup.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>VideoFullScreen.xml</label><visible>Window.IsVisible(VideoFullScreen.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>VideoOSD.xml</label><visible>Window.IsVisible(VideoOSD.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>VideoOSDBookmarks.xml</label><visible>Window.IsVisible(VideoOSDBookmarks.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>ViewsAddonBrowser.xml</label><visible>Window.IsVisible(ViewsAddonBrowser.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>ViewsFileMode.xml</label><visible>Window.IsVisible(ViewsFileMode.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>ViewsLiveTV.xml</label><visible>Window.IsVisible(ViewsLiveTV.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>ViewsMusicLibrary.xml</label><visible>Window.IsVisible(ViewsMusicLibrary.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>ViewsPictures.xml</label><visible>Window.IsVisible(ViewsPictures.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>ViewsPVRGuide.xml</label><visible>Window.IsVisible(ViewsPVRGuide.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>ViewsVideoLibrary.xml</label><visible>Window.IsVisible(ViewsVideoLibrary.xml)</visible></control>
+            <control type='label'><width>780</width><height>21</height><label>ViewsWeather.xml</label><visible>Window.IsVisible(ViewsWeather.xml)</visible></control>
+		</control>
+
+		<!-- group -->
+		<!-- Control label -->
+		<control type="label">
+			<right>15</right>
+			<top>25</top>
+			<width>780</width>
+			<height>21</height>
+			<textcolor>FF0000FF</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>Font_RSS</font>
+			<align>right</align>
+			<label>$INFO[System.CurrentControl]</label>
+			<visible>Skin.HasSetting(DebugGrid)</visible>
+		</control>
+		<!-- Path label -->
+		<control type="label">
+			<right>15</right>
+			<top>48</top>
+			<width>780</width>
+			<height>21</height>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>Font_RSS</font>
+			<align>right</align>
+			<label>[COLOR=FF00FF00]$INFO[Container.FolderName,, - ][/COLOR]$INFO[Container.FolderPath]</label>
+			<visible>Skin.HasSetting(DebugGrid)</visible>
+		</control>
+		<!-- Wheather FanartCode -->
+		<control type="label">
+			<right>15</right>
+			<top>71</top>
+			<width>780</width>
+			<height>21</height>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>Font_RSS</font>
+			<align>right</align>
+			<label>Weather.FanartCode: $INFO[Weather.FanartCode]</label>
+			<visible>Skin.HasSetting(DebugGrid)</visible>
+		</control>
+	</controls>
+</window>
