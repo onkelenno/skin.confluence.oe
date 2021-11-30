@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <!-- onkel_enno: -->
+    <include name="BackgroundHome">
+        <texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Container(9000).ListItem.Icon]</texture>
+    </include>
+    <include name="BackgroundOther">
+        <texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.String(FocusedMenu.Background)]</texture>
+    </include>
+    <!-- :onkel_enno -->
 	<include name="CommonBackground">
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<description>Normal Default Background Image</description>
 			<include>BackgroundDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
+            <!-- onkel_enno: -->
+            <include condition="Window.IsVisible(Home.xml)">BackgroundHome</include>
+            <include condition="!Window.IsVisible(Home.xml)">BackgroundOther</include>
+			<!-- <texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture> -->
+            <!-- :onkel_enno -->
 			<visible>![Skin.HasSetting(UseCustomBackground) + !String.IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
