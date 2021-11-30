@@ -144,9 +144,11 @@
 						<scrolltime>200</scrolltime>
 						<itemlayout height="30">
 							<control type="label">
-								<left>5</left>
+								<!-- onkel_enno: -->
+								<left>0</left>
 								<top>0</top>
-								<width>160</width>
+								<width>180</width>
+								<!-- :onkel_enno -->
 								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
@@ -156,9 +158,11 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>175</left>
+								<!-- onkel_enno: -->
+								<left>185</left>
 								<top>0</top>
-								<width>565</width>
+								<width>555</width>
+								<!-- :onkel_enno -->
 								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
@@ -179,9 +183,11 @@
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
-								<left>5</left>
+								<!-- onkel_enno: -->
+								<left>0</left>
 								<top>0</top>
-								<width>160</width>
+								<width>180</width>
+								<!-- :onkel_enno -->
 								<height>30</height>
 								<font>font13</font>
 								<align>right</align>
@@ -191,9 +197,11 @@
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<left>175</left>
+								<!-- onkel_enno: -->
+								<left>185</left>
 								<top>0</top>
-								<width>565</width>
+								<width>555</width>
+								<!-- :onkel_enno -->
 								<height>30</height>
 								<font>font13</font>
 								<align>left</align>
@@ -265,11 +273,20 @@
 								<label2>$INFO[ListItem.mpaa]</label2>
 								<visible>!String.IsEmpty(ListItem.mpaa)</visible>
 							</item>
+							<!-- onkel_enno: -->
 							<item>
-								<label>$LOCALIZE[15311]</label>
-								<label2>$INFO[ListItem.FilenameAndPath]</label2>
-								<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
+								<label>$LOCALIZE[573]:</label>
+								<label2>$INFO[ListItem.Path]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Path)</visible>
 							</item>
+							<item>
+								<label>$LOCALIZE[561]:</label>
+								<label2>$INFO[ListItem.Filename]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Filename)</visible>
+							</item>
+							<!-- :onkel_enno -->
 						</content>
 					</control>
 					<control type="image">
@@ -578,11 +595,20 @@
 								<label2>$INFO[ListItem.RatingAndVotes]</label2>
 								<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
 							</item>
+							<!-- onkel_enno: -->
 							<item>
-								<label>$LOCALIZE[15311]</label>
-								<label2>$INFO[ListItem.FilenameAndPath]</label2>
-								<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
+								<label>$LOCALIZE[573]:</label>
+								<label2>$INFO[ListItem.Path]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Path)</visible>
 							</item>
+							<item>
+								<label>$LOCALIZE[561]:</label>
+								<label2>$INFO[ListItem.Filename]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Filename)</visible>
+							</item>
+							<!-- :onkel_enno -->
 						</content>
 					</control>
 					<control type="image">
