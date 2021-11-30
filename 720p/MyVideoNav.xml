@@ -127,7 +127,9 @@
 				</control>
 				<control type="radiobutton" id="14">
 					<description>Watched Toggle</description>
-					<textwidth>170</textwidth>
+					<!-- onkel_enno: -->
+					<textwidth>200</textwidth>
+					<!-- :onkel_enno -->
 					<include>ButtonCommonValues</include>
 					<label>20367</label>
 				</control>
@@ -178,6 +180,14 @@
 					<onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
 					<visible>Container.Content(addons)</visible>
 				</control>
+				<!-- onkel_enno: -->
+				<control type="button" id="26028001">
+					<description>Reload Skin</description>
+					<include>ButtonCommonValues</include>
+					<label>20183</label>
+					<onclick>ReloadSkin()</onclick>
+				</control>
+				<!-- :onkel_enno -->
 				<include>CommonNowPlaying_Controls</include>
 			</control>
 		</control>

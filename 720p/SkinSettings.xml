@@ -405,7 +405,7 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
-                        <label>31147</label>
+                        <label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
                         <onclick>Skin.ToggleSetting(HomepageHideFavourite)</onclick>
                         <selected>Skin.HasSetting(HomepageHideFavourite)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -418,7 +418,7 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
-                        <label>31148</label>
+                        <label>$LOCALIZE[31111] - $LOCALIZE[137]</label>
                         <onclick>Skin.ToggleSetting(HomepageHideSearch)</onclick>
                         <selected>Skin.HasSetting(HomepageHideSearch)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -435,6 +435,34 @@
                         <align>left</align>
                         <aligny>center</aligny>
                     </control>
+					<!-- onkel_enno: -->
+                    <control type="radiobutton" id="2202">
+                        <description>Hide Radio Button</description>
+                        <width>750</width>
+                        <height>40</height>
+                        <font>font13</font>
+                        <textcolor>grey2</textcolor>
+                        <focusedcolor>white</focusedcolor>
+                        <label>$LOCALIZE[31111] - $LOCALIZE[19021]</label>
+                        <onclick>Skin.ToggleSetting(HomeMenuNoRadioButton)</onclick>
+                        <selected>Skin.HasSetting(HomeMenuNoRadioButton)</selected>
+                        <texturefocus>MenuItemFO.png</texturefocus>
+                        <texturenofocus>MenuItemNF.png</texturenofocus>
+                    </control>
+                    <control type="radiobutton" id="2203">
+                        <description>Hide TV Button</description>
+                        <width>750</width>
+                        <height>40</height>
+                        <font>font13</font>
+                        <textcolor>grey2</textcolor>
+                        <focusedcolor>white</focusedcolor>
+                        <label>$LOCALIZE[31111] - $LOCALIZE[31502]</label>
+                        <onclick>Skin.ToggleSetting(HomeMenuNoTVButton)</onclick>
+                        <selected>Skin.HasSetting(HomeMenuNoTVButton)</selected>
+                        <texturefocus>MenuItemFO.png</texturefocus>
+                        <texturenofocus>MenuItemNF.png</texturenofocus>
+                    </control>
+                    <!-- :onkel_enno -->
                     <control type="radiobutton" id="221">
                         <description>Hide Videos Button</description>
                         <width>750</width>
@@ -548,7 +576,9 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
-                        <label>$LOCALIZE[31111] - $LOCALIZE[31114]</label>
+                        <!-- onkel_enno: -->
+                        <label>$LOCALIZE[31111] - $LOCALIZE[33063]</label>
+                        <!-- :onkel_enno -->
                         <onclick>Skin.ToggleSetting(HomeMenuNoSystemButton)</onclick>
                         <selected>Skin.HasSetting(HomeMenuNoSystemButton)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -556,6 +586,7 @@
                     </control>
                     <!-- Playlist buttons -->
                     <control type="label" id="247">
+                        <description>main button playlists</description>
                         <width>750</width>
                         <height>45</height>
                         <font>font13_title</font>
@@ -572,7 +603,7 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
-                        <label>$LOCALIZE[31143] $LOCALIZE[20342] $LOCALIZE[31144]</label>
+                        <label>$LOCALIZE[31143] $LOCALIZE[20342] $LOCALIZE[559]</label>
                         <onclick>Skin.ToggleSetting(HomeMenuMovieUsePlaylist)</onclick>
                         <selected>Skin.HasSetting(HomeMenuMovieUsePlaylist)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -583,7 +614,7 @@
                         <width>750</width>
                         <height>40</height>
                         <font>font13</font>
-                        <label>- $LOCALIZE[20342] $LOCALIZE[31145]: </label>
+                        <label>- $LOCALIZE[20342] $LOCALIZE[559]: </label>
                         <label2>[COLOR=selected]$INFO[Skin.String(HomeMenuMoviePlaylist)][/COLOR]</label2>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
@@ -599,7 +630,7 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
-                        <label>$LOCALIZE[31143] $LOCALIZE[20343] $LOCALIZE[31144]</label>
+                        <label>$LOCALIZE[31143] $LOCALIZE[20343] $LOCALIZE[559]</label>
                         <onclick>Skin.ToggleSetting(HomeMenuTVShowUsePlaylist)</onclick>
                         <selected>Skin.HasSetting(HomeMenuTVShowUsePlaylist)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -610,7 +641,7 @@
                         <width>750</width>
                         <height>40</height>
                         <font>font13</font>
-                        <label>- $LOCALIZE[20343] $LOCALIZE[31145]: </label>
+                        <label>- $LOCALIZE[20343] $LOCALIZE[559]: </label>
                         <label2>[COLOR=selected]$INFO[Skin.String(HomeMenuTVShowPlaylist)][/COLOR]</label2>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
@@ -626,7 +657,7 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
-                        <label>$LOCALIZE[31143] $LOCALIZE[2] $LOCALIZE[31144]</label>
+                        <label>$LOCALIZE[31143] $LOCALIZE[2] $LOCALIZE[559]</label>
                         <onclick>Skin.ToggleSetting(HomeMenuMusicUsePlaylist)</onclick>
                         <selected>Skin.HasSetting(HomeMenuMusicUsePlaylist)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -636,7 +667,7 @@
                         <width>750</width>
                         <height>40</height>
                         <font>font13</font>
-                        <label>- $LOCALIZE[2] $LOCALIZE[31145]: </label>
+                        <label>- $LOCALIZE[2] $LOCALIZE[559]: </label>
                         <label2>[COLOR=selected]$INFO[Skin.String(HomeMenuMusicPlaylist)][/COLOR]</label2>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
@@ -882,7 +913,9 @@
                         <focusedcolor>white</focusedcolor>
                         <texturefocus>MenuItemFO.png</texturefocus>
                         <texturenofocus>MenuItemNF.png</texturenofocus>
-                        <onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
+                        <!-- onkel_enno: -->
+                        <onclick>Skin.SetImage(CustomBackgroundPath,special://skin/backgrounds)</onclick>
+                        <!-- :onkel_enno -->
                         <enable>Skin.HasSetting(UseCustomBackground)</enable>
                     </control>
                     <control type="button" id="313">
@@ -895,7 +928,9 @@
                         <focusedcolor>white</focusedcolor>
                         <texturefocus>MenuItemFO.png</texturefocus>
                         <texturenofocus>MenuItemNF.png</texturenofocus>
-                        <onclick>Skin.SetImage(MasterCustomBackgroundPath)</onclick>
+                        <!-- onkel_enno: -->
+                        <onclick>Skin.SetImage(MasterCustomBackgroundPath,special://skin/backgrounds)</onclick>
+                        <!-- :onkel_enno -->
                         <enable>Skin.HasSetting(UseCustomBackground)</enable>
                     </control>
                 </control>
@@ -957,6 +992,156 @@
                             <align>left</align>
                             <aligny>center</aligny>
                         </control>
+                        <!-- onkel_enno: -->
+                        <control type="radiobutton" id="26028004">
+                            <description>Recently Added Enabled</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>$LOCALIZE[31328]</label>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.ToggleSetting(HomeVideosRecentlyEnabled)</onclick>
+                            <selected>Skin.HasSetting(HomeVideosRecentlyEnabled)</selected>
+                        </control>
+                        <control type="radiobutton" id="26028005">
+                            <description>Sets Enabled</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>$LOCALIZE[20434]</label>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.ToggleSetting(HomeVideosSetsEnabled)</onclick>
+                            <selected>Skin.HasSetting(HomeVideosSetsEnabled)</selected>
+                        </control>
+                        <control type="radiobutton" id="26028006">
+                            <description>Titles Enabled</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>$LOCALIZE[369]</label>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.ToggleSetting(HomeVideosTitlesEnabled)</onclick>
+                            <selected>Skin.HasSetting(HomeVideosTitlesEnabled)</selected>
+                        </control>
+                        <control type="radiobutton" id="260280061">
+                            <description>Files Enabled</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>744</label>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.ToggleSetting(HomeVideosFilesEnabled)</onclick>
+                            <selected>Skin.HasSetting(HomeVideosFilesEnabled)</selected>
+                        </control>
+                        <control type="radiobutton" id="26028007">
+                            <description>Genres Enabled</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>$LOCALIZE[135]</label>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.ToggleSetting(HomeVideosGenresEnabled)</onclick>
+                            <selected>Skin.HasSetting(HomeVideosGenresEnabled)</selected>
+                        </control>
+                        <control type="radiobutton" id="26028008">
+                            <description>Years Enabled</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>$LOCALIZE[652]</label>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.ToggleSetting(HomeVideosYearsEnabled)</onclick>
+                            <selected>Skin.HasSetting(HomeVideosYearsEnabled)</selected>
+                        </control>
+                        <control type="radiobutton" id="26028009">
+                            <description>Actors Enabled</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>$LOCALIZE[344]</label>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.ToggleSetting(HomeVideosActorsEnabled)</onclick>
+                            <selected>Skin.HasSetting(HomeVideosActorsEnabled)</selected>
+                        </control>
+                        <control type="radiobutton" id="26028010">
+                            <description>Playlist 1 Enabled</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>$LOCALIZE[559] [B]1[/B]</label>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.ToggleSetting(HomeVideosPlaylist1Enabled)</onclick>
+                            <selected>Skin.HasSetting(HomeVideosPlaylist1Enabled)</selected>
+                        </control>
+                        <control type="button" id="26028011">
+                            <description>Playlist 1</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>- $LOCALIZE[551]</label>
+                            <label2>[COLOR=selected]$INFO[Skin.String(HomeVideosPlaylist1Name)][/COLOR]</label2>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.SetFile(HomeVideosPlaylist1,.xsp,special://videoplaylists)</onclick>
+                            <onclick>Skin.SetString(HomeVideosPlaylist1Name)</onclick>
+                            <visible>Skin.HasSetting(HomeVideosPlaylist1Enabled)</visible>
+                        </control>
+                        <control type="radiobutton" id="26028012">
+                            <description>Playlist 2 Enabled</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>$LOCALIZE[559] [B]2[/B]</label>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.ToggleSetting(HomeVideosPlaylist2Enabled)</onclick>
+                            <selected>Skin.HasSetting(HomeVideosPlaylist2Enabled)</selected>
+                            <visible>Skin.HasSetting(HomeVideosPlaylist1Enabled)</visible>
+                        </control>
+                        <control type="button" id="26028013">
+                            <description>Playlist 2</description>
+                            <width>750</width>
+                            <height>40</height>
+                            <font>font13</font>
+                            <label>- $LOCALIZE[551]</label>
+                            <label2>[COLOR=selected]$INFO[Skin.String(HomeVideosPlaylist2Name)][/COLOR]</label2>
+                            <textcolor>grey2</textcolor>
+                            <focusedcolor>white</focusedcolor>
+                            <texturefocus>MenuItemFO.png</texturefocus>
+                            <texturenofocus>MenuItemNF.png</texturenofocus>
+                            <onclick>Skin.SetFile(HomeVideosPlaylist2,.xsp,special://videoplaylists)</onclick>
+                            <onclick>Skin.SetString(HomeVideosPlaylist2Name)</onclick>
+                            <visible>Skin.HasSetting(HomeVideosPlaylist2Enabled)</visible>
+                        </control>
+						<!-- :onkel_enno -->
                         <control type="button" id="411">
                             <width>750</width>
                             <height>40</height>
@@ -980,6 +1165,7 @@
                             <texturefocus>MenuItemFO.png</texturefocus>
                             <texturenofocus>MenuItemNF.png</texturenofocus>
                             <onclick>Skin.SetAddon(HomeVideosButton2,xbmc.addon.video)</onclick>
+                            <visible>!String.IsEmpty(Skin.String(HomeVideosButton1))</visible>
                         </control>
                         <control type="button" id="413">
                             <width>750</width>
@@ -992,6 +1178,7 @@
                             <texturefocus>MenuItemFO.png</texturefocus>
                             <texturenofocus>MenuItemNF.png</texturenofocus>
                             <onclick>Skin.SetAddon(HomeVideosButton3,xbmc.addon.video)</onclick>
+                            <visible>!String.IsEmpty(Skin.String(HomeVideosButton2))</visible>
                         </control>
                         <control type="button" id="414">
                             <width>750</width>
@@ -1004,18 +1191,19 @@
                             <texturefocus>MenuItemFO.png</texturefocus>
                             <texturenofocus>MenuItemNF.png</texturenofocus>
                             <onclick>Skin.SetAddon(HomeVideosButton4,xbmc.addon.video)</onclick>
+                            <visible>!String.IsEmpty(Skin.String(HomeVideosButton3))</visible>
                         </control>
                         <control type="button" id="415">
                             <width>750</width>
                             <height>40</height>
                             <font>font13</font>
-                            <label>$LOCALIZE[24000] [B]5[/B]</label>
+                            <label>$LOCALIZE[24000] [B]5[/B] ($LOCALIZE[24992])</label>
                             <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton5))][/COLOR]</label2>
                             <textcolor>grey2</textcolor>
                             <focusedcolor>white</focusedcolor>
                             <texturefocus>MenuItemFO.png</texturefocus>
                             <texturenofocus>MenuItemNF.png</texturenofocus>
-                            <onclick>Skin.SetAddon(HomeVideosButton5,xbmc.addon.video)</onclick>
+                            <onclick>Skin.SetAddon(HomeVideosButton5,xbmc.addon.executable)</onclick>
                         </control>
                         <control type="label" id="420">
                             <width>750</width>
