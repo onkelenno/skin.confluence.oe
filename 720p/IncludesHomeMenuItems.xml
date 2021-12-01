@@ -56,39 +56,37 @@
 		<control type="button" id="26028002">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>$INFO[Skin.String(HomeVideosPlaylist1Name)]</label>
-			<onclick>ActivateWindow(Videos,$INFO[Skin.String(HomeVideosPlaylist1)],return)</onclick>
+			<onclick>ActivateWindow(Videos, $INFO[Skin.String(HomeVideosPlaylist1)], return)</onclick>
 			<visible>Skin.HasSetting(HomeVideosPlaylist1Enabled)</visible>
 		</control>
 		<control type="button" id="26028003">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>$INFO[Skin.String(HomeVideosPlaylist2Name)]</label>
-			<onclick>ActivateWindow(Videos,$INFO[Skin.String(HomeVideosPlaylist2)],return)</onclick>
+			<onclick>ActivateWindow(Videos, $INFO[Skin.String(HomeVideosPlaylist2)], return)</onclick>
 			<visible>Skin.HasSetting(HomeVideosPlaylist2Enabled)</visible>
 		</control>
 		<!-- :onkel_enno -->
 		<control type="button" id="90162">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>$INFO[Container(90160).ListItemNoWrap(0).Label]</label>
-			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(0).FileNameAndPath],return)</onclick>
-			<!-- onkel_enno: -->
+            <!-- onkel_enno: -->
+			<label>20382</label>
+			<onclick>ActivateWindow(Videos, videodb://recentlyaddedmovies,return)</onclick>
 			<visible>Skin.HasSetting(HomeVideosRecentlyEnabled)</visible>
 			<!-- :onkel_enno -->
 		</control>
 		<control type="button" id="90163">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>$INFO[Container(90160).ListItemNoWrap(1).Label]</label>
-			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(1).FileNameAndPath],return)</onclick>
-			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(1).Label)</visible>
-			<!-- onkel_enno: -->
+            <!-- onkel_enno: -->
+			<label>20434</label>
+			<onclick>ActivateWindow(Videos, videodb://movies/sets, return)</onclick>
 			<visible>Skin.HasSetting(HomeVideosSetsEnabled)</visible>
 			<!-- :onkel_enno -->
 		</control>
 		<control type="button" id="90164">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>$INFO[Container(90160).ListItemNoWrap(2).Label]</label>
-			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(2).FileNameAndPath],return)</onclick>
-			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(2).Label)</visible>
-			<!-- onkel_enno: -->
+            <!-- onkel_enno: -->
+			<label>369</label>
+			<onclick>ActivateWindow(Videos, videodb://movies/titles, return)</onclick>
 			<visible>Skin.HasSetting(HomeVideosTitlesEnabled)</visible>
 			<!-- :onkel_enno -->
 		</control>
@@ -96,34 +94,31 @@
         <control type="button" id="901641">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>744</label>
-			<onclick>ActivateWindow(Videos,Files,return)</onclick>
+			<onclick>ActivateWindow(Videos, Files, return)</onclick>
 			<visible>Skin.HasSetting(HomeVideosFilesEnabled)</visible>
 		</control>
         <!-- :onkel_enno -->
 		<control type="button" id="90165">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>$INFO[Container(90160).ListItemNoWrap(3).Label]</label>
-			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(3).FileNameAndPath],return)</onclick>
-			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(3).Label)</visible>
-			<!-- onkel_enno: -->
+            <!-- onkel_enno: -->
+			<label>135</label>
+			<onclick>ActivateWindow(Videos, videodb://movies/genres, return)</onclick>
 			<visible>Skin.HasSetting(HomeVideosGenresEnabled)</visible>
 			<!-- :onkel_enno -->
 		</control>
 		<control type="button" id="90166">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>$INFO[Container(90160).ListItemNoWrap(4).Label]</label>
-			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(4).FileNameAndPath],return)</onclick>
-			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(4).Label)</visible>
-			<!-- onkel_enno: -->
+            <!-- onkel_enno: -->
+			<label>652</label>
+			<onclick>ActivateWindow(Videos, videodb://movies/years, return)</onclick>
 			<visible>Skin.HasSetting(HomeVideosYearsEnabled)</visible>
 			<!-- :onkel_enno -->
 		</control>
 		<control type="button" id="90167">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>$INFO[Container(90160).ListItemNoWrap(5).Label]</label>
-			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(5).FileNameAndPath],return)</onclick>
-			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(5).Label)</visible>
 			<!-- onkel_enno: -->
+			<label>344</label>
+			<onclick>ActivateWindow(Videos,videodb://movies/actors, return)</onclick>
 			<visible>Skin.HasSetting(HomeVideosActorsEnabled)</visible>
 			<!-- :onkel_enno -->
 		</control>
