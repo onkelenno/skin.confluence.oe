@@ -582,7 +582,7 @@
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
                         <!-- onkel_enno: -->
-                        <label>$LOCALIZE[31111] - $LOCALIZE[33063]</label>
+                        <label>$LOCALIZE[31111] - $LOCALIZE[13000]</label>
                         <!-- :onkel_enno -->
                         <onclick>Skin.ToggleSetting(HomeMenuNoSystemButton)</onclick>
                         <selected>Skin.HasSetting(HomeMenuNoSystemButton)</selected>
