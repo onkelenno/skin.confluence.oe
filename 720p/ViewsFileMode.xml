@@ -89,6 +89,18 @@
 						<aspectratio>keep</aspectratio>
 						<visible>Window.IsVisible(Videos)</visible>
 					</control>
+					<!-- onkel_enno: -->
+					<control type="image">
+						<description>Overlay deleted</description>
+						<left>-10</left>
+						<top>0</top>
+						<width>690</width>
+						<height>41</height>
+						<aspectratio>keep</aspectratio>
+						<texture>RedLine.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+					</control>
+					<!-- :onkel_enno -->
 				</itemlayout>
 				<focusedlayout height="40" width="580">
 					<control type="image">
@@ -182,6 +194,18 @@
 						<aspectratio>keep</aspectratio>
 						<visible>Window.IsVisible(Videos)</visible>
 					</control>
+					<!-- onkel_enno: -->
+					<control type="image">
+						<description>Overlay deleted</description>
+						<left>-10</left>
+						<top>0</top>
+						<width>690</width>
+						<height>41</height>
+						<aspectratio>keep</aspectratio>
+						<texture>RedLine.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+					</control>
+					<!-- :onkel_enno -->
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
@@ -229,13 +253,16 @@
 		</control>
 	</include>
 	<include name="ThumbnailView">
+		<!-- Ansicht: Vorschaubild -->
 		<control type="group">
 			<visible>Control.IsVisible(500)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="panel" id="500">
 				<left>90</left>
 				<top>80</top>
-				<width>1080</width>
+				<!-- onkel_enno: -->
+				<width>1090</width>
+				<!-- :onkel_enno -->
 				<height>558</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
@@ -333,71 +360,101 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
 				</focusedlayout>
-				<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="279" width="216">
+				<!-- onkel_enno: -->
+				<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="279" width="180">
 					<control type="image">
 						<left>1</left>
 						<top>0</top>
-						<width>214</width>
-						<height>240</height>
+						<width>180</width>
+						<height>270</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="label">
-						<left>8</left>
-						<top>240</top>
-						<width>200</width>
-						<height>25</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>center</align>
-						<aligny>center</aligny>
-						<info>ListItem.Label</info>
+						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
-						<left>170</left>
-						<top>210</top>
+						<description>Overlay deleted</description>
+						<left>1</left>
+						<top>0</top>
+						<width>180</width>
+						<height>270</height>
+						<aspectratio>keep</aspectratio>
+						<texture>deleted.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+					</control>
+					<control type="image">
+						<description>Video stereoscopics flagging image</description>
+						<width>50</width>
+						<height>30</height>
+						<top>2</top>
+						<left>4</left>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>flagging/video/3D.png</texture>
+						<visible>ListItem.IsStereoscopic</visible>
+					</control>
+					<control type="image">
+						<left>150</left>
+						<top>240</top>
 						<width>30</width>
 						<height>30</height>
-						<aspectratio>keep</aspectratio>
+						<aspectratio align="right">keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="276" width="216">
+				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="276" width="180">
 					<control type="image">
 						<left>1</left>
 						<top>0</top>
-						<width>214</width>
-						<height>240</height>
+						<width>180</width>
+						<height>270</height>
 						<bordertexture border="5">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="label">
-						<left>8</left>
-						<top>240</top>
-						<width>200</width>
-						<height>25</height>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>center</align>
-						<aligny>center</aligny>
-						<info>ListItem.Label</info>
+						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
-						<left>170</left>
-						<top>210</top>
+						<description>Overlay deleted</description>
+						<left>1</left>
+						<top>0</top>
+						<width>180</width>
+						<height>270</height>
+						<aspectratio>keep</aspectratio>
+						<texture>deleted.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+					</control>
+					<control type="image">
+						<description>Video stereoscopics flagging image</description>
+						<width>50</width>
+						<height>30</height>
+						<top>2</top>
+						<left>4</left>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>flagging/video/3D.png</texture>
+						<visible>ListItem.IsStereoscopic</visible>
+					</control>
+					<control type="image">
+						<left>150</left>
+						<top>240</top>
 						<width>30</width>
 						<height>30</height>
-						<aspectratio>keep</aspectratio>
+						<aspectratio align="right">keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
 					</control>
 				</focusedlayout>
 			</control>
+			<control type="label">
+				<left>90</left>
+				<top>38</top>
+				<width>1080</width>
+				<height>25</height>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<selectedcolor>selected</selectedcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<info>ListItem.Label</info>
+			</control>
+			<!-- :onkel_enno -->
 			<control type="scrollbar" id="60">
 				<left>1170</left>
 				<top>80</top>
@@ -494,6 +551,7 @@
 		</control>
 	</include>
 	<include name="FullWidthList">
+		<!-- Ansicht: Grosse Liste -->
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
 			<include>VisibleFadeEffect</include>
@@ -590,6 +648,18 @@
 						<aspectratio>keep</aspectratio>
 						<visible>Window.IsVisible(Videos)</visible>
 					</control>
+					<!-- onkel_enno: -->
+					<control type="image">
+						<description>Overlay deleted</description>
+						<left>-10</left>
+						<top>0</top>
+						<width>1080</width>
+						<height>41</height>
+						<aspectratio>keep</aspectratio>
+						<texture>RedLine.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+					</control>
+					<!-- :onkel_enno -->
 				</itemlayout>
 				<focusedlayout height="40" width="1080">
 					<control type="image">
@@ -691,6 +761,18 @@
 						<aspectratio>keep</aspectratio>
 						<visible>Window.IsVisible(Videos)</visible>
 					</control>
+					<!-- onkel_enno: -->
+					<control type="image">
+						<description>Overlay deleted</description>
+						<left>-10</left>
+						<top>0</top>
+						<width>1080</width>
+						<height>41</height>
+						<aspectratio>keep</aspectratio>
+						<texture>RedLine.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+					</control>
+					<!-- :onkel_enno -->
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">

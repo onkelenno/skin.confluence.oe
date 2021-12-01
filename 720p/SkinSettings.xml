@@ -311,6 +311,7 @@
                     <onright>60</onright>
                     <onup>9002</onup>
                     <ondown>9002</ondown>
+                    <!-- Home screen options -->
                     <control type="label" id="200">
                         <width>750</width>
                         <height>45</height>
@@ -405,7 +406,9 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
+						<!-- onkel_enno: -->
                         <label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
+						<!-- :onkel_enno -->
                         <onclick>Skin.ToggleSetting(HomepageHideFavourite)</onclick>
                         <selected>Skin.HasSetting(HomepageHideFavourite)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -418,7 +421,9 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
+						<!-- onkel_enno: -->
                         <label>$LOCALIZE[31111] - $LOCALIZE[137]</label>
+						<!-- :onkel_enno -->
                         <onclick>Skin.ToggleSetting(HomepageHideSearch)</onclick>
                         <selected>Skin.HasSetting(HomepageHideSearch)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -603,7 +608,9 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
+						<!-- onkel_enno: -->
                         <label>$LOCALIZE[31143] $LOCALIZE[20342] $LOCALIZE[559]</label>
+						<!-- :onkel_enno -->
                         <onclick>Skin.ToggleSetting(HomeMenuMovieUsePlaylist)</onclick>
                         <selected>Skin.HasSetting(HomeMenuMovieUsePlaylist)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -614,7 +621,9 @@
                         <width>750</width>
                         <height>40</height>
                         <font>font13</font>
+						<!-- onkel_enno: -->
                         <label>- $LOCALIZE[20342] $LOCALIZE[559]: </label>
+						<!-- :onkel_enno -->
                         <label2>[COLOR=selected]$INFO[Skin.String(HomeMenuMoviePlaylist)][/COLOR]</label2>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
@@ -630,7 +639,9 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
+						<!-- onkel_enno: -->
                         <label>$LOCALIZE[31143] $LOCALIZE[20343] $LOCALIZE[559]</label>
+						<!-- :onkel_enno -->
                         <onclick>Skin.ToggleSetting(HomeMenuTVShowUsePlaylist)</onclick>
                         <selected>Skin.HasSetting(HomeMenuTVShowUsePlaylist)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -641,7 +652,9 @@
                         <width>750</width>
                         <height>40</height>
                         <font>font13</font>
+						<!-- onkel_enno: -->
                         <label>- $LOCALIZE[20343] $LOCALIZE[559]: </label>
+						<!-- :onkel_enno -->
                         <label2>[COLOR=selected]$INFO[Skin.String(HomeMenuTVShowPlaylist)][/COLOR]</label2>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
@@ -657,7 +670,9 @@
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
+						<!-- onkel_enno: -->
                         <label>$LOCALIZE[31143] $LOCALIZE[2] $LOCALIZE[559]</label>
+						<!-- :onkel_enno -->
                         <onclick>Skin.ToggleSetting(HomeMenuMusicUsePlaylist)</onclick>
                         <selected>Skin.HasSetting(HomeMenuMusicUsePlaylist)</selected>
                         <texturefocus>MenuItemFO.png</texturefocus>
@@ -667,7 +682,9 @@
                         <width>750</width>
                         <height>40</height>
                         <font>font13</font>
+						<!-- onkel_enno: -->
                         <label>- $LOCALIZE[2] $LOCALIZE[559]: </label>
+						<!-- :onkel_enno -->
                         <label2>[COLOR=selected]$INFO[Skin.String(HomeMenuMusicPlaylist)][/COLOR]</label2>
                         <textcolor>grey2</textcolor>
                         <focusedcolor>white</focusedcolor>
@@ -1165,7 +1182,9 @@
                             <texturefocus>MenuItemFO.png</texturefocus>
                             <texturenofocus>MenuItemNF.png</texturenofocus>
                             <onclick>Skin.SetAddon(HomeVideosButton2,xbmc.addon.video)</onclick>
+							<!-- onkel_enno: -->
                             <visible>!String.IsEmpty(Skin.String(HomeVideosButton1))</visible>
+							<!-- :onkel_enno -->
                         </control>
                         <control type="button" id="413">
                             <width>750</width>
@@ -1178,7 +1197,9 @@
                             <texturefocus>MenuItemFO.png</texturefocus>
                             <texturenofocus>MenuItemNF.png</texturenofocus>
                             <onclick>Skin.SetAddon(HomeVideosButton3,xbmc.addon.video)</onclick>
+							<!-- onkel_enno: -->
                             <visible>!String.IsEmpty(Skin.String(HomeVideosButton2))</visible>
+							<!-- :onkel_enno -->
                         </control>
                         <control type="button" id="414">
                             <width>750</width>
@@ -1191,19 +1212,25 @@
                             <texturefocus>MenuItemFO.png</texturefocus>
                             <texturenofocus>MenuItemNF.png</texturenofocus>
                             <onclick>Skin.SetAddon(HomeVideosButton4,xbmc.addon.video)</onclick>
+							<!-- onkel_enno: -->
                             <visible>!String.IsEmpty(Skin.String(HomeVideosButton3))</visible>
+							<!-- :onkel_enno -->
                         </control>
                         <control type="button" id="415">
                             <width>750</width>
                             <height>40</height>
                             <font>font13</font>
+							<!-- onkel_enno: -->
                             <label>$LOCALIZE[24000] [B]5[/B] ($LOCALIZE[24992])</label>
+							<!-- :onkel_enno -->
                             <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton5))][/COLOR]</label2>
                             <textcolor>grey2</textcolor>
                             <focusedcolor>white</focusedcolor>
                             <texturefocus>MenuItemFO.png</texturefocus>
                             <texturenofocus>MenuItemNF.png</texturenofocus>
+							<!-- onkel_enno: -->
                             <onclick>Skin.SetAddon(HomeVideosButton5,xbmc.addon.executable)</onclick>
+							<!-- :onkel_enno -->
                         </control>
                         <control type="label" id="420">
                             <width>750</width>
