@@ -1,7 +1,5 @@
 Set-up
 
-- Place Custom_Overlay.xml in your skin's XML folder (ie 720p, 1080i, etc)
-- Place the relevant debuggrid PNG in the skin's root folder and change the Custom_Overlay.xml debug grid controls if neccessary
 - Place the keymap.xml in your /userdata/keymaps folder (or add the actions to your current one)
 
 Usage
