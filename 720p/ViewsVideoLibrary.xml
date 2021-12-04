@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <!-- Ansicht: Poster -->
 	<include name="PosterWrapView">
-		<!-- Ansicht: Poster -->
 		<control type="grouplist">
 			<visible>Control.IsVisible(501)</visible>
 			<left>60</left>
@@ -43,11 +43,12 @@
 					<!-- onkel_enno: -->
 					<control type="image">
 						<description>Overlay deleted</description>
-						<left>1</left>
-						<top>0</top>
+						<left>2</left>
+						<top>40</top>
 						<width>214</width>
 						<height>310</height>
 						<aspectratio>keep</aspectratio>
+                        <bordersize>4</bordersize>
 						<texture>deleted.png</texture>
 						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
 					</control>
@@ -70,13 +71,17 @@
 					<!-- onkel_enno: -->
 					<control type="image">
 						<description>Overlay deleted</description>
-						<left>1</left>
-						<top>0</top>
+                        <depth>DepthContentPopout</depth>
+						<left>-2</left>
+						<top>36</top>
 						<width>222</width>
 						<height>318</height>
 						<aspectratio>keep</aspectratio>
+                        <bordersize>8</bordersize>
 						<texture>deleted.png</texture>
 						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+                        <animation reversible="false" effect="zoom" start="-2,36,222,318" end="-28,0,284,390" time="150">focus</animation>
+						<animation reversible="false" effect="zoom" end="-2,36,222,318" start="-28,0,284,390" time="150">unfocus</animation>
 					</control>
 					<!-- :onkel_enno -->
 					<control type="image">
@@ -315,8 +320,8 @@
 			</control>
 		</control>
 	</include>
-	<include name="PosterWrapView2_Fanart">
-		<!-- Ansicht: Fanart -->
+	<!-- Ansicht: Fanart -->
+    <include name="PosterWrapView2_Fanart">
 		<control type="group">
 			<left>0</left>
 			<top>350</top>
@@ -388,6 +393,8 @@
 						<width>120</width>
 						<height>160</height>
 						<aspectratio>keep</aspectratio>
+						<bordersize>4</bordersize>
+						<fadetime>200</fadetime>
 						<texture>deleted.png</texture>
 						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
 					</control>
@@ -431,11 +438,14 @@
 					<!-- onkel_enno: -->
 					<control type="image">
 						<description>Overlay deleted</description>
+                        <depth>DepthContentPopout</depth>
 						<left>-2</left>
 						<top>16</top>
 						<width>128</width>
 						<height>168</height>
 						<aspectratio>keep</aspectratio>
+						<bordersize>8</bordersize>
+						<fadetime>200</fadetime>
 						<texture>deleted.png</texture>
 						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
 						<animation reversible="false" effect="zoom" start="-2,16,128,168" end="-12,-10,148,198" time="150">focus</animation>
@@ -827,10 +837,12 @@
 			</control>
 		</control>
 	</include>
+    <!-- Ansicht: Medieninformationen 2 -->
 	<include name="MediaListView3">
 		<control type="group">
 			<visible>Control.IsVisible(503)</visible>
 			<include>VisibleFadeEffect</include>
+            <!-- Ansicht: Medieninformationen 2 Liste links -->
 			<control type="list" id="503">
 				<left>70</left>
 				<top>245</top>
@@ -955,6 +967,18 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
+                    <!-- onkel_enno: -->
+					<control type="image">
+						<description>Overlay deleted</description>
+						<left>-10</left>
+						<top>0</top>
+						<width>580</width>
+						<height>41</height>
+						<aspectratio>keep</aspectratio>
+						<texture>RedLine.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+					</control>
+					<!-- :onkel_enno -->
 					<control type="label">
 						<left>10</left>
 						<top>0</top>
@@ -994,18 +1018,6 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<aspectratio align="left">keep</aspectratio>
 					</control>
-					<!-- onkel_enno: -->
-					<control type="image">
-						<description>Overlay deleted</description>
-						<left>-10</left>
-						<top>0</top>
-						<width>580</width>
-						<height>41</height>
-						<aspectratio>keep</aspectratio>
-						<texture>RedLine.png</texture>
-						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
-					</control>
-					<!-- :onkel_enno -->
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
@@ -1024,7 +1036,8 @@
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(503)</visible>
 			</control>
-			<control type="group">
+			<!-- Ansicht: Medieninformationen 2 Details rechts -->
+            <control type="group">
 				<left>710</left>
 				<top>245</top>
 				<visible>Container.Content(TVShows)</visible>
@@ -1253,6 +1266,21 @@
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
 				</control>
+                <!-- onkel_enno: -->
+                <control type="image">
+                    <description>Overlay deleted</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>260</width>
+                    <height>355</height>
+                    <aspectratio>keep</aspectratio>
+                    <fadetime>IconCrossfadeTime</fadetime>
+                    <texture>deleted.png</texture>
+                    <visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+                    <bordertexture border="8">ThumbShadow.png</bordertexture>
+					<bordersize>8</bordersize>
+                </control>
+                <!-- :onkel_enno -->
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
 					<left>0</left>
@@ -1283,10 +1311,12 @@
 			</control>
 		</control>
 	</include>
-	<include name="MediaListView2">
+	<!-- Ansicht: Medieninformationen -->
+    <include name="MediaListView2">
 		<control type="group">
 			<visible>Control.IsVisible(504)</visible>
 			<include>VisibleFadeEffect</include>
+            <!-- Ansicht: Medieninformationen Liste links -->
 			<control type="list" id="504">
 				<left>70</left>
 				<top>78</top>
@@ -1480,6 +1510,7 @@
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(504)</visible>
 			</control>
+            <!-- Ansicht: Medieninformationen Details rechts -->
 			<control type="group">
 				<left>710</left>
 				<top>70</top>
@@ -1775,7 +1806,9 @@
 			</control>
 		</control>
 	</include>
-	<include name="MediaListView4">
+	<!-- Ansicht: Medieninformationen 3 -->
+    <include name="MediaListView4">
+        <!-- Ansicht: Medieninformationen 3 Liste links -->
 		<control type="group">
 			<visible>Control.IsVisible(515)</visible>
 			<include>VisibleFadeEffect</include>
@@ -1982,6 +2015,20 @@
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
 				</control>
+                <!-- onkel_enno: -->
+                <control type="image">
+                    <description>Overlay deleted</description>
+                    <left>560</left>
+                    <top>140</top>
+                    <width>180</width>
+                    <height>440</height>
+                    <aspectratio align="left" aligny="bottom">keep</aspectratio>
+                    <fadetime>IconCrossfadeTime</fadetime>
+                    <texture>deleted.png</texture>
+                    <visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+                    <bordersize>8</bordersize>
+                </control>
+                <!-- :onkel_enno -->
 			</control>
 			<control type="group">
 				<left>470</left>

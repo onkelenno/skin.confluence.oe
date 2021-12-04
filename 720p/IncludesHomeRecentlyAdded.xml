@@ -66,6 +66,19 @@
 							<bordertexture border="5">button-nofocus.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
+                        <!-- onkel_enno: -->
+                        <control type="image">
+                            <description>Overlay deleted</description>
+                            <left>10</left>
+                            <top>10</top>
+                            <width>160</width>
+                            <height>170</height>
+                            <texture>deleted.png</texture>
+                            <visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+                            <aspectratio>keep</aspectratio>
+                            <bordersize>5</bordersize>
+                        </control>
+                        <!-- :onkel_enno -->
 						<control type="label">
 							<left>15</left>
 							<top>185</top>
@@ -111,6 +124,18 @@
 							<bordersize>5</bordersize>
 							<visible>!Control.HasFocus(8000)</visible>
 						</control>
+                        <!-- onkel_enno: -->
+                        <control type="image">
+                            <description>Overlay deleted</description>
+                            <left>10</left>
+                            <top>10</top>
+                            <width>160</width>
+                            <height>170</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture>deleted.png</texture>
+                            <visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+                        </control>
+                        <!-- :onkel_enno -->
 						<control type="label">
 							<left>15</left>
 							<top>185</top>

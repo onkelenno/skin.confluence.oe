@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="CommonRootView">
+	<!-- Ansicht: Liste -->
+    <include name="CommonRootView">
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
 			<include>VisibleFadeEffect</include>
@@ -240,6 +241,19 @@
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
 				</control>
+                <!-- onkel_enno: -->
+                <control type="image">
+                    <description>Overlay deleted</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>360</width>
+                    <height>540</height>
+                    <aspectratio aligny="bottom">keep</aspectratio>
+                    <texture>deleted.png</texture>
+                    <visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+                    <bordersize>8</bordersize>
+                </control>
+                <!-- :onkel_enno -->
 				<control type="image">
 					<left>8</left>
 					<top>532</top>
@@ -252,8 +266,8 @@
 			</control>
 		</control>
 	</include>
+    <!-- Ansicht: Vorschaubild -->
 	<include name="ThumbnailView">
-		<!-- Ansicht: Vorschaubild -->
 		<control type="group">
 			<visible>Control.IsVisible(500)</visible>
 			<include>VisibleFadeEffect</include>
@@ -383,11 +397,11 @@
 						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
 					</control>
 					<control type="image">
-						<description>Video stereoscopics flagging image</description>
+						<description>Overlay 3D</description>
 						<width>50</width>
 						<height>30</height>
-						<top>2</top>
-						<left>4</left>
+						<top>6</top>
+						<left>5</left>
 						<aspectratio align="left">keep</aspectratio>
 						<texture>flagging/video/3D.png</texture>
 						<visible>ListItem.IsStereoscopic</visible>
@@ -423,11 +437,11 @@
 						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
 					</control>
 					<control type="image">
-						<description>Video stereoscopics flagging image</description>
+						<description>Overlay 3D</description>
 						<width>50</width>
 						<height>30</height>
-						<top>2</top>
-						<left>4</left>
+						<top>6</top>
+						<left>5</left>
 						<aspectratio align="left">keep</aspectratio>
 						<texture>flagging/video/3D.png</texture>
 						<visible>ListItem.IsStereoscopic</visible>
@@ -550,8 +564,8 @@
 			</control>
 		</control>
 	</include>
-	<include name="FullWidthList">
-		<!-- Ansicht: Grosse Liste -->
+	<!-- Ansicht: Grosse Liste -->
+    <include name="FullWidthList">
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
 			<include>VisibleFadeEffect</include>

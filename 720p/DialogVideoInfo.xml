@@ -122,6 +122,19 @@
 						<bordersize>4</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
+                    <!-- onkel_enno: -->
+					<control type="image">
+						<description>Overlay deleted</description>
+						<left>0</left>
+						<top>0</top>
+						<width>270</width>
+						<height>380</height>
+						<aspectratio>keep</aspectratio>
+                        <bordersize>4</bordersize>
+						<texture>deleted.png</texture>
+						<visible>String.IsEqual(ListItem.FileExtension,"deleted")</visible>
+					</control>
+					<!-- :onkel_enno -->
 					<control type="image">
 						<left>4</left>
 						<top>4</top>
