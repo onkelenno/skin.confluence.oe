@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<controls/>
+    <onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+    <!-- onkel_enno: -->
+    <onload condition="!Skin.HasSetting(initialized) + !Skin.HasSetting(HomeMenuNoWeatherButton)">Skin.SetBool(HomeMenuNoWeatherButton, true)</onload>
+    <onload condition="!Skin.HasSetting(initialized) + !Skin.HasSetting(HomeMenuNoPicturesButton)">Skin.SetBool(HomeMenuNoPicturesButton, true)</onload>
+    <onload condition="!Skin.HasSetting(initialized) + !Skin.HasSetting(HomeMenuNoGamesButton)">Skin.SetBool(HomeMenuNoGamesButton, true)</onload>
+    <onload condition="!Skin.HasSetting(initialized) + !Skin.HasSetting(HomeMenuNoRadioButton)">Skin.SetBool(HomeMenuNoRadioButton, true)</onload>
+    <onload condition="!Skin.HasSetting(initialized) + !Skin.HasSetting(HomeMenuNoTVButton)">Skin.SetBool(HomeMenuNoTVButton, true)</onload>
+    <onload condition="!Skin.HasSetting(initialized) + !Skin.HasSetting(HomeMenuNoMovieButton)">Skin.SetBool(HomeMenuNoMovieButton, true)</onload>
+    <onload condition="!Skin.HasSetting(initialized) + !Skin.HasSetting(HomeMenuNoTVShowButton)">Skin.SetBool(HomeMenuNoTVShowButton, true)</onload>
+    <onload condition="!Skin.HasSetting(initialized) + !Skin.HasSetting(HomeMenuNoMusicButton)">Skin.SetBool(HomeMenuNoMusicButton, true)</onload>
+    <onload condition="!Skin.HasSetting(initialized) + !Skin.HasSetting(HomeMenuNoProgramsButton)">Skin.SetBool(HomeMenuNoProgramsButton, true)</onload>
+    <onload condition="!Skin.HasSetting(initialized)">Skin.SetBool(initialized, true)</onload>
+    <!-- :onkel_enno -->
+    <controls/>
 </window>
