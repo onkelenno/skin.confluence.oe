@@ -187,6 +187,13 @@
 					<label>20183</label>
 					<onclick>ReloadSkin()</onclick>
 				</control>
+				<control type="button" id="26028014">
+					<description>Quit Kodi</description>
+					<include>ButtonCommonValues</include>
+					<label>13009</label>
+					<onclick>Quit()</onclick>
+					<visible>System.ShowExitButton</visible>
+				</control>
 				<!-- :onkel_enno -->
 				<include>CommonNowPlaying_Controls</include>
 			</control>
