@@ -364,7 +364,9 @@
 					<top>120</top>
 					<width>910</width>
 					<height>25</height>
-					<label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
+                    <!-- onkel_enno: -->
+					<label>$LOCALIZE[31049] $INFO[Player.FinishTime] (-$INFO[Player.TimeRemaining])</label>
+                    <!-- : onkel_enno -->
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12</font>
